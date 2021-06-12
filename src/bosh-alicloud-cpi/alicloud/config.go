@@ -252,7 +252,7 @@ func (c Config) NewOssClient(region string) (*oss.Client, error) {
 			}
 			endpoint = endpointItem.Endpoint
 		} else {
-			endpoint = fmt.Sprintf("oss-%s.aliyuncs.com", c.OpenApi.Region)
+			endpoint = fmt.Sprintf("oss-%s-internal.aliyuncs.com", c.OpenApi.Region)
 		}
 	}
 	if !strings.HasPrefix(endpoint, "http") {
